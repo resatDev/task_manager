@@ -1,0 +1,130 @@
+html{
+    background: #eeeeee;
+    font-family: "Arial, Helvetica, sans-serif";
+}
+*{
+    padding:0;
+    margin:0;
+    border:none;
+    list-style: none;
+}
+upper{
+    width: 95%;
+    height: 8%;
+    position: fixed;
+    left: 5%;
+    background: #eeeeee;
+}
+upper:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);
+}
+menu{
+    width: 5%;
+    height: 100%;
+    background : #9b33b2;
+    position: fixed;
+}
+menu:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);
+}
+#dashboard{
+    width: 100%;
+    height:8%;
+    background: #641575;
+    cursor: pointer;
+    text-align: center;
+}
+#dashboard:hover{
+    transition: 0.2s;
+    background: #9b33b2;
+}
+#dashboard a{
+    width: 100%;
+    height: 100%;
+}
+#dashboard img{
+    width: 70%;
+    height:  100%;
+}
+.list_element{
+    width: 100%;
+    height: auto;
+}
+menu{
+    position: fixed;
+}
+ menu ul{
+    width: 100%;
+    height: 50%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+menu ul li{
+    width: 100%;
+    height: 15%;
+    padding: 40% 0 40%  0;
+}
+menu ul a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: white;
+    text-decoration:none;
+    text-align: center;
+}
+menu ul a:hover{
+    transition: 0.2s;
+    background: #641575;
+}
+menu ul li img{
+    width: 40%;
+    height: 40%;
+}
+#logo{
+    width:25%;
+    float: left;
+    height: 100%;
+    font-family: 'Amatic SC';
+    text-align: center;
+    font-size: 200%;
+}
+#logo{
+    margin: 0.5% 0 0 0;
+}
+#menu_vertical{
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+#menu_vertical ul {
+    list-style-type: none;
+    margin: 2% 0 0 0;
+    padding: 0; 
+    overflow: hidden;
+}
+  
+#menu_vertical li {
+    float: right;
+    width: 20%;
+    height: 100%;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+  
+#menu_vertical li a {
+    display: block;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+}
+#menu_vertical li a img{
+    width: 20%;
+    height: 30%;
+}
+.special_case_1{
+    margin: 5% 0 0 -1%;
+}

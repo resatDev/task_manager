@@ -1,0 +1,68 @@
+#list_project{
+    position: absolute;
+    width: 95%;
+    height: auto;
+    top: 8%;
+    left: 5%;
+    padding-top:3%;
+}
+#list_project_head{
+    margin-top: 1%;
+    margin-bottom: -0.8%;
+}
+#list_project_head h2{
+    width: 77%;
+    line-height: 200%;
+    margin: 0 auto;
+    padding-left: 3%;
+    background: #9b33b2;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 150%;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);
+}
+#project_table{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+}
+#project_table table{
+    width: 90%;
+    height: 50%; 
+    margin: 0 auto;
+    line-height: 250%;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    border: 0px;
+    padding-top:1%; 
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);
+}
+table a{
+    text-decoration: none;
+    color: blue;
+    width: 10%;
+}
+table tr{
+    background:#fff;
+    border: 0;
+}
+table td{
+    border: 0;
+}
+table tr:hover{
+    transition: 0.2s;
+    background: #eee;
+}
+table img{
+    width: 45%;
+    height: 5%;
+}
+.td-actions{
+    width: 5%;
+    height: 3%;
+    padding-top: 1%;
+}

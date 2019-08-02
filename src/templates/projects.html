@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/project_detail.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/project.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <title>TASK MANAGER - PROJECT</title>
+</head>
+<body>
+    <!--NAVBAR AT ALL PAGE-->
+    <nav>
+        <!--UPPER NAVBAR-->
+        <upper>
+            <div id="logo">
+                <h2>SHYBRO++ "PROJECTS"</h2>
+            </div>
+            <div id="menu_vertical">
+                <ul>
+                    <li><a href="/logout/" class="special_case_1"><img src="/static/images/quit.png"></a></li>
+                    <li><a href="/tasks/create/"><img src="/static/images/add.png"><p>Task</p></a></li>
+                    <li><a href="/projects/create/"><img src="/static/images/add.png"><p>Project</p></a></li>
+                </ul>
+            </div>
+        </upper>
+        <!--LEFT NAVBAR-->
+        <menu>
+            <a href="/posts/"> 
+                <div id="dashboard">
+                    <img src="/static/images/dash.png" alt="Dashboard" />
+                </div>
+            </a>
+            <ul>
+                <a href="/projects/" class="list_element"><li><img src="/static/images/project.png" /></li></a>
+                <a href="/tasks/" class="list_element"><li><img src="/static/images/task.png" /></li></a>
+                <a href="http://localhost:4000" class="list_element"><li><img src="/static/images/message.png" /></li></a>
+            </ul>
+        </menu>
+    </nav>
+    <!--NAVBAR END-->
+    <div id="middle">
+    <!--HEADING-->
+          <div id="list_project_head"><h2>Project List</h2></div>
+        <div id="project_table">
+        <!--PROJECT LISTS-->
+             <table class="table" border = "0">
+                      <thead class="text-primary">
+                        <th>
+                          ID
+                        </th>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Description
+                        </th>
+                        <th>
+                          Product Owner
+                        </th>
+                        <th>
+                          Timestamp
+                        </th>
+                        <th></th>
+                      </thead>
+                      <tbody>
+                        {% for obj in project_list %}
+                        <tr id="t1">
+                          <td>
+                            {{ obj.id}}
+                          </td>
+                          <td>
+                            <a href="/projects/{{ obj.id}}" >{{ obj.title }}</a>
+                          </td>
+                          <td>
+                            {{ obj.description }}
+                          </td>
+                          <td>
+                            {{ obj.owner }}
+                          </td>
+                          <td>
+                            {{ obj.timestamp }}
+                          </td>
+                          <td class="td-actions text-right">
+                              <a href="/projects/{{ obj.id}}/edit"><img src="/static/images/edit.png"></a>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+        </div>
+    </div>
+</body>
+</html>

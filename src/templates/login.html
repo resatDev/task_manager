@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TASK MANAGER - Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" type = "text/css" href = "/static/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+</head>
+<body>
+    <div id="login_back">
+        <div id="login_middle">
+            <h2 id="login_head">SHYBRO++ - LOGIN</h2>
+            <div id="login_form">
+                <form method = "POST">
+                    {% load crispy_forms_tags %}
+                    {% csrf_token %}
+                    
+                    {{form.username|as_crispy_field}}
+                    {{form.password|as_crispy_field}}
+                    
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

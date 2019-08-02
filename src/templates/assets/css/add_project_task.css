@@ -1,0 +1,103 @@
+#middle{
+    width:95%;
+    height: 98%;
+    position: absolute;
+    left: 5%;
+    top:8%;
+    z-index: -1;
+    font-family: 'Fira Sans', sans-serif;
+}
+#form_project_heading{
+    width:50%;
+    height: 1%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    color: #fff;
+    margin:0 auto;
+    margin-top: 2%; 
+    border-radius: 10px;
+    background: #9b33b2;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);    
+    position:relative;
+}
+#form_project{
+    width:70%;
+    height: 60%;
+    padding: 2%;
+    margin:0 auto;
+    margin-top: -1%; 
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);
+}
+#left{
+    width: 50%;
+    height: 100%;
+    float:left;
+}
+#right{
+    width: 40%;
+    height:50%;
+    float: right;
+}
+
+#form_project form input{
+    width: 90%;
+    line-height: 30px;
+    font-size: 150%;
+    padding: 2%;
+    margin-bottom: 15%;
+    float:left;
+    border-radius: 10px;
+}
+textarea{
+    width: 100%;
+    line-height: 30px;
+    font-size: 200%;
+    padding: 2%;
+    float:left;
+    border-radius: 10px;
+    resize:none;
+}
+input:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);    
+}
+textarea:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);    
+}
+button{
+    width: 40%;
+    line-height: 50px;
+    background: rgb(76,175,80);
+    border-radius: 10px;
+    float:left;
+    cursor:pointer;
+    color: #fff;
+    border: none;
+    margin-top: 3%;
+    font-size: 18px;
+}
+button:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 20px 0 rgba(76, 175, 80, 0.8);  
+    background: rgb(50, 131, 54);
+}
+select{
+    width: 90%;
+    line-height: 30px;
+    font-size: 150%;
+    padding: 2%;
+    margin-bottom: 15%;
+    float:left;
+    border-radius: 10px;
+}
+select option{
+    border-radius: 10px;
+}
+select:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);
+}

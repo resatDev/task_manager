@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>TASK MANAGER - DASHBOARD</title>
+    
+    <script>
+    //SCRIPT//////HIDING AND SHOWING THE POST FORMS AND POSTS//
+    $(document).ready(function(){
+        $("#post_adding").click(function(){
+            $("#post_form").show();
+            $("#post_adding").hide();
+            $('#posts').hide();
+        });
+        $("#post_form_img").click(function(){
+            $("#post_form").hide();
+            $("#post_adding").show();
+            $('#posts').show();
+        });
+    });
+</script>
+</head>
+<body>
+    <!--NAVBAR AT ALL PAGE-->
+    <nav>
+        <!--UPPER NAVBAR-->
+        <upper>
+            <div id="logo">
+                <h2>SHYBRO++ "DASHBOARD"</h2>
+            </div>
+            <div id="menu_vertical">
+                <ul>
+                    <li><a href="/logout/" class="special_case_1"><img src="/static/images/quit.png"></a></li>
+                    <li><a href="/tasks/create/"><img src="/static/images/add.png"><p>Task</p></a></li>
+                    <li><a href="/projects/create/"><img src="/static/images/add.png"><p>Project</p></a></li>
+                </ul>
+            </div>
+        </upper>
+        <!--LEFT NAVBAR-->
+        <menu>
+            <a href="/posts/"> 
+                <div id="dashboard">
+                    <img src="/static/images/dash.png" alt="Dashboard" />
+                </div>
+            </a>
+            <ul>
+                <a href="/projects/" class="list_element"><li><img src="/static/images/project.png" /></li></a>
+                <a href="/tasks/" class="list_element"><li><img src="/static/images/task.png" /></li></a>
+                <a href="http://localhost:4000" class="list_element"><li><img src="/static/images/message.png" /></li></a>
+            </ul>
+        </menu>
+    </nav>
+    <!--NAVBAR END-->
+    <div id="middle">
+    <!--POSTS FORMS BUTTON-->
+        <div id="post_adding" onclick="open form()">What are you thinking?</div>
+        <!--POSTS FORM-->
+        <div id="post_form" onclick="close_form()">
+            {% load crispy_forms_tags %}
+            <form method="POST">
+                {% csrf_token %}
+                <br>
+                <img id="post_form_img"src="/static/images/delete.png">
+                {{form.title|as_crispy_field}}<br>
+                {{form.person|as_crispy_field}}<br>
+                
+                {{form.description|as_crispy_field}}    
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+        <!--POSTS AREAS-->
+        <div id="posts">
+        <!--POSTS-->
+        {% for obj in post_list %}
+            <div class="task">
+                <div class="task_options">
+                    <a href="/posts/{{obj.id}}/delete"><img src="/static/images/delete.png"></a>
+                    <!--<a href=""><img src="/static/images/edit.png"></a>-->
+                </div>
+
+                <div class="task_heading">
+                    <h2>{{obj.person}} - {{obj.title}}</h2>
+                </div>
+
+                <div class="task_due_date">Post Date:  <i>{{obj.timestamp}}</i></div>
+
+                <div class="task_description">
+                    <p>{{obj.description}}</p>
+                </div>
+            </div>
+            {% endfor %}
+             
+        </div>
+        
+    
+  
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TASK MANAGER - CONTACT</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+        <link href="/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <!--NAVBAR AT ALL PAGE-->
+    <nav>
+        <!--UPPER NAVBAR-->
+        <upper>
+            <div id="logo">
+                <h2>SHYBRO++ "CONTACT"</h2>
+            </div>
+            <div id="menu_vertical">
+                <ul>
+                    <li><a href="http://localhost:8000" class="special_case_1"><img src="images/quit.png"></a></li>
+                    <li><a href="http://localhost:8000/tasks/create/"><img src="images/add.png"><p>Task</p></a></li>
+                    <li><a href="http://localhost:8000/projects/create/"><img src="images/add.png"><p>Project</p></a></li>
+                </ul>
+            </div>
+        </upper>
+        <!--LEFT NAVBAR-->
+        <menu>
+            <a href="http://localhost:8000/posts/"> 
+                <div id="dashboard">
+                    <img src="images/dash.png" alt="Dashboard" />
+                </div>
+            </a>
+            <ul>
+                <a href="http://localhost:8000/projects/" class="list_element"><li><img src="images/project.png" /></li></a>
+                <a href="http://localhost:8000/tasks/" class="list_element"><li><img src="images/task.png" /></li></a>
+                <a href="#" class="list_element"><li><img src="images/message.png" /></li></a>
+            </ul>
+        </menu>
+    </nav>
+    <!--NAVBAR END-->
+        <div id="middle">
+            <div id="mario-chat">
+                <div id="chat-window">
+                    <div id="output"></div>
+                    <div id="feedback"></div>
+                </div>
+                <input id="handle" type="text" placeholder="Handle" />
+                <input id="message" type="text" placeholder="Message" />
+                <button id="send">SEND</button>
+            </div>
+        </div>
+        <script>
+            var input1 = document.getElementById("handle");
+            var input2 = document.getElementById("message");
+            input1.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("send").click();
+                }
+            });
+            input2.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("send").click();
+                }
+            });
+</script>
+
+    </body>
+    <script src="/chat.js"></script>
+</html>

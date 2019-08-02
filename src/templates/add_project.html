@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/add_project_task.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <title>TASK MANAGER - CREATE PROJECT</title>
+</head>
+<body>
+    <!--NAVBAR AT ALL PAGE-->
+    <nav>
+        <!--UPPER NAVBAR-->
+        <upper>
+            <div id="logo">
+                <h2>SHYBRO++ "CREATE PROJECT"</h2>
+            </div>
+            <div id="menu_vertical">
+                <ul>
+                    <li><a href="/logout/" class="special_case_1"><img src="/static/images/quit.png"></a></li>
+                    <li><a href="/tasks/create/"><img src="/static/images/add.png"><p>Task</p></a></li>
+                    <li><a href="/projects/create/"><img src="/static/images/add.png"><p>Project</p></a></li>
+                </ul>
+            </div>
+        </upper>
+        <!--LEFT NAVBAR-->
+        <menu>
+            <a href="/posts/"> 
+                <div id="dashboard">
+                    <img src="/static/images/dash.png" alt="Dashboard" />
+                </div>
+            </a>
+            <ul>
+                <a href="/projects/" class="list_element"><li><img src="/static/images/project.png" /></li></a>
+                <a href="/tasks/" class="list_element"><li><img src="/static/images/task.png" /></li></a>
+                <a href="http://localhost:4000" class="list_element"><li><img src="/static/images/message.png" /></li></a>
+            </ul>
+        </menu>
+    </nav>
+    <!--NAVBAR END-->
+    <div id="middle">
+    <!--ADD PROJECT FORM-->
+        <div id="form_project_heading"><h2>Create Project</h2></div>
+        <div id="form_project">
+            <form method="POST">
+                {% load crispy_forms_tags %}
+                {% csrf_token %}
+                <div id="left">
+                    {{form.title|as_crispy_field}}
+                    {{form.description|as_crispy_field}}
+                    
+                </div>
+                <div id="right">
+                    {{form.owner|as_crispy_field}}
+                    <button type="submit" style="margin-top:65%">CREATE</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>

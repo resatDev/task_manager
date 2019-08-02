@@ -1,0 +1,217 @@
+html{
+    background: #eeeeee;
+}
+*{
+    padding:0;
+    margin:0;
+    border:none;
+    list-style: none;
+}
+#middle{
+    width:95%;
+    height: 98%;
+    position: absolute;
+    left: 5%;
+    top:8%;
+    z-index: -1;
+    font-family: 'Fira Sans', sans-serif;
+}
+upper{
+    width: 95%;
+    height: 8%;
+    position: fixed;
+    left: 5%;
+    background: #eeeeee;
+}
+upper:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);
+}
+menu{
+    width: 5%;
+    height: 100%;
+    background : #9b33b2;
+    position: fixed;
+}
+menu:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 20px 0 rgba(143, 99, 153, 0.8);
+}
+#dashboard{
+    width: 100%;
+    height:8%;
+    background: #641575;
+    cursor: pointer;
+    text-align: center;
+}
+#dashboard:hover{
+    transition: 0.2s;
+    background: #9b33b2;
+}
+#dashboard a{
+    width: 100%;
+    height: 100%;
+}
+#dashboard img{
+    width: 70%;
+    height:  100%;
+}
+.list_element{
+    width: 100%;
+    height: auto;
+}
+menu{
+    position: fixed;
+}
+ menu ul{
+    width: 100%;
+    height: 50%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+menu ul li{
+    width: 100%;
+    height: 15%;
+    padding: 40% 0 40%  0;
+}
+menu ul a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: white;
+    text-decoration:none;
+    text-align: center;
+}
+menu ul a:hover{
+    transition: 0.2s;
+    background: #641575;
+}
+menu ul li img{
+    width: 40%;
+    height: 40%;
+}
+#logo{
+    width:25%;
+    float: left;
+    height: 100%;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-size: 200%;
+}
+#logo{
+    margin: 0.5% 0 0 0;
+}
+#menu_vertical{
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+#menu_vertical ul {
+    list-style-type: none;
+    margin: 2% 0 0 0;
+    padding: 0; 
+    overflow: hidden;
+}
+  
+#menu_vertical li {
+    float: right;
+    width: 20%;
+    height: 100%;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+  
+#menu_vertical li a {
+    display: block;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+}
+#menu_vertical li a img{
+    width: 20%;
+    height: 30%;
+}
+.special_case_1{
+    margin: 5% 0 0 -1%;
+}
+/*navbar end*/
+body{
+    font-family: 'Nunito';
+}
+
+#mario-chat h2{
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #575ed8;
+}
+
+#mario-chat{
+    max-width: 95%;
+    height: 87vh;
+    margin: 0 auto;
+    margin-top: 2%;
+    border: 1px solid #ddd;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+
+#chat-window{
+    height: 86%;
+    overflow: auto;
+    background: #f9f9f9;
+    border-radius: 20px 20px 0 0;
+}
+
+#output p{
+    padding: 14px 0px;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;
+}
+
+#feedback p{
+    color: #aaa;
+    padding: 14px 0px;
+    margin: 0 20px;
+}
+
+#output strong{
+    color: #575ed8;
+}
+
+#mario-chat label{
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 20px;
+}
+
+#mario-chat input{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #eee;
+    border: 0;
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    font-family: Nunito;
+    font-size: 16px;
+}
+
+#mario-chat button{
+    background: rgb(242, 186, 255);
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    padding: 12px 0;
+    width: 100%;
+    height: 5%;
+    border-radius: 0 0 20px 20px;
+}
+#mario-chat button:hover{
+    background: rgb(155,51,178);
+    transition: 0.2s;
+    cursor:pointer;
+}
